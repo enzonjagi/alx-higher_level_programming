@@ -14,7 +14,7 @@ followed by a new line, followed by the 9 first characters of str,
 followed by a new line<br />6. Play with Strings:
 "6-concat.py" adds two strings together and prints the result
 using str.format()<br />7 Prints bits of a word as seen when executed:
-word_first_3 should contain the first 3 letters of the variable word
-word_last_2 should contain the last 2 letters of the variable word
-middle_word should contain the value of the variable word without the first and
+<br />word_first_3 should contain the first 3 letters of the variable word
+<br />word_last_2 should contain the last 2 letters of the variable word
+<br />middle_word should contain the value of the variable word without the first and
 last letters<br />
