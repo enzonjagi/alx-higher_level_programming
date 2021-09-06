@@ -11,4 +11,6 @@ using str.format<br />4. Print Float:
 followed by a new line<br />5. Print string:
 "5-print_string.py" prints 3 times the value of str,
 followed by a new line, followed by the 9 first characters of str,
-followed by a new line<br />
+followed by a new line<br />6. Play with Strings:
+"6-concat.py" adds two strings together and prints the result
+using str.format()<br />
