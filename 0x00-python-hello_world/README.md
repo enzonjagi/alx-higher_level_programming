@@ -17,4 +17,5 @@ using str.format()<br />7 Prints bits of a word as seen when executed:
 <br />word_first_3 should contain the first 3 letters of the variable word
 <br />word_last_2 should contain the last 2 letters of the variable word
 <br />middle_word should contain the value of the variable word without the first and
-last letters<br /> 8. prints a new sentence<br />9. Prints the zen of python
+last letters<br /> 8. prints a new sentence<br />9. Prints
+the zen of python<br /> 10. Technical interview prep 0: cycle in linked list
