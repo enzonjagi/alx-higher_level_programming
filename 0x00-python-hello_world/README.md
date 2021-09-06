@@ -8,4 +8,7 @@ followed by a new line.<br />3. Print integer:
 "3-print_integer.py" prints "98" + " Battery Street"
 using str.format<br />4. Print Float:
 "4-print_float.py" prints "Float:" followed by the float with only 2 digits
+followed by a new line<br />5. Print string:
+"5-print_string.py" prints 3 times the value of str,
+followed by a new line, followed by the 9 first characters of str,
 followed by a new line<br />
