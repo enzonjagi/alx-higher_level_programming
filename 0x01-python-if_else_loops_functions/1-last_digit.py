@@ -5,7 +5,8 @@ number = random.randint(-10000, 10000)
 if number == 0:
     x = 0
 elif number < 0:
-    x = (-number) % 10
+    x = abs(number) % 10
+    x = -abs(x)
 else:
     x = number % 10
 # print message based on the last digit
