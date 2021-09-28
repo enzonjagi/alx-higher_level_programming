@@ -1,4 +1,4 @@
-#!/usr/python3/bin
+#!/usr/bin/python3
 def safe_print_list(my_list=[], x=0):
     b = x
     c = 0
