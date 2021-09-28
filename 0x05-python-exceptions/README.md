@@ -40,8 +40,9 @@ File: ```1-safe_print_integer.py```
 ## 5. Raise Exception
 <p>
 A function that raises an exception<br/>
-<br/>prototype ```def raise_exception():```
+<br/>prototype def raise_exception():
 <br/>
+
 GitHub repository: ```alx-higher_level_programming```
 Directory: ```0x05-python-exceptions```
 File: ```5-raise_exception.py```
