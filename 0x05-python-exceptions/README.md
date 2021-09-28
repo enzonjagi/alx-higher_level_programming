@@ -10,6 +10,9 @@ What’s the difference between errors and exceptions
 <br/>When do we need to implement a clean-up action after an exception.</p>
 
 ## Tasks
+
+GitHub repository: ```alx-higher_level_programming```<br/>
+Directory: ```0x05-python-exceptions```
 ## 0. Safe list printing
 <p>
 Write a function that prints x elements of a list.
@@ -17,8 +20,6 @@ Write a function that prints x elements of a list.
 Prototype: def safe_print_list(my_list=[], x=0):
 <br/>
 
-GitHub repository: ```alx-higher_level_programming```
-Directory: ```0x05-python-exceptions```
 File: ```0-safe_print_list.py```
 </p>
 
@@ -32,8 +33,6 @@ You have to use "{:d}".format() to print as integer
 <br/>You are not allowed to import any module
 <br/>You are not allowed to use type()
 
-GitHub repository: ```alx-higher_level_programming```
-Directory: ```0x05-python-exceptions```
 File: ```1-safe_print_integer.py```
 </p>
 
@@ -43,7 +42,14 @@ A function that raises an exception<br/>
 <br/>prototype def raise_exception():
 <br/>
 
-GitHub repository: ```alx-higher_level_programming```
-Directory: ```0x05-python-exceptions```
 File: ```5-raise_exception.py```
+</p>
+
+## 6. Raise a message
+<p>
+A function that raises an Exception with a message
+<br/>Prototype: def raise_exception_msg(message=""):
+<br/>
+
+File: ```6-raise_exception_msg.py```
 </p>
