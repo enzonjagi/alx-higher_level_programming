@@ -3,11 +3,10 @@
 
 
 class Square:
-    '''An empty Class'''
+    '''An Square Class'''
 
     def __init__(self, size=0):
         '''A initialization function'''
-
         if type(size) != int:
             raise TypeError("size must be an integer")
         elif size < 0:
