@@ -54,7 +54,17 @@ Function that divides 2 integers and prints the ```result```
 
 Prototype: def safe_print_division(a, b):
 <br/>
+
 File: ```3-safe_print_division.py```
+</p>
+
+## 4. Divide a list
+<p>
+Function divides 2 lists safely: catching all errors<br/>
+
+Prototype def list_division(my_list_1, my_list_2, list_length):<br/>
+
+file ```4-list_division.py```
 </p>
 
 ## 5. Raise Exception
