@@ -36,6 +36,16 @@ You have to use "{:d}".format() to print as integer
 File: ```1-safe_print_integer.py```
 </p>
 
+## 2. Print and count integers
+<p>
+A function that prints the first x elements of a list and only integers.
+<br/>
+Prototype: def safe_print_list_integers(my_list=[], x=0):
+<br/>
+
+file: ```2-safe_print_list_integers.py```
+</p>
+
 ## 3. Integers division with debug
 <p>
 
