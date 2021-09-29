@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 '''Square Module'''
 
+
 class Square:
     '''An empty Class'''
 
@@ -8,4 +9,3 @@ class Square:
         '''Initialize empty class'''
 
         pass
-
