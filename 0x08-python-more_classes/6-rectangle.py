@@ -9,11 +9,13 @@ class Rectangle:
     A class in python3 that is
     Inclusive of the area and perimeter
     """
+    number_of_instances = 0
 
     def __init__(self, width=0, height=0):
         """Instantiate"""
         self.width = width
         self.height = height
+        type(self).number_of_instances += 1
 
     @property
     def width(self):
@@ -73,3 +75,4 @@ class Rectangle:
 
     def __del__(self):
         print("Bye rectangle...")
+        type(self).number_of_instances -= 1
