@@ -13,8 +13,8 @@ class Rectangle:
 
     def __init__(self, width=0, height=0):
         """Instantiate"""
-        self.width = width
-        self.height = height
+        self.__width = width
+        self.__height = height
 
     @property
     def width(self):
@@ -45,7 +45,7 @@ class Rectangle:
 
 if __name__ == '__main__':
     my_rectangle = Rectangle(2, 4)
-    print(my_rectangle.__dict__)
+    print(sorted(my_rectangle.__dict__))
 
     my_rectangle.width = 10
     my_rectangle.height = 3
