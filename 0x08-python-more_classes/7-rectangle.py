@@ -52,23 +52,16 @@ class Rectangle:
             return (0)
         return 2 * (self.width + self.height)
 
-    def print(self):
-        if (self.width == 0) or (self.height == 0):
-            return("")
-        else:
-            symbols = Rectangle.print_symbol * self.__width
-            return '\n'.join(symbols for height in self.__height)
-
     def __str__(self):
         if (self.width == 0) or (self.height == 0):
             return("")
         else:
-            symbols = Rectangle.print_symbol * self.__width
-            return '\n'.join(symbols for height in self.__height)
+            symbols = "{}".format(Rectangle.print_symbol) * self.__width
+            return '\n'.join(symbols for height in range(self.__height))
 
     def __repr__(self):
         return ("Rectangle(" + str(self.width) + ", " + str(self.height) + ")")
 
     def __del__(self):
-        print("Bye rectangle...")
         type(self).number_of_instances -= 1
+        print("Bye rectangle...")
