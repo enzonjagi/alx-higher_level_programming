@@ -17,7 +17,7 @@ class Rectangle:
 
     @property
     def width(self):
-        return (self.__width__)
+        return (self.__width)
 
     @width.setter
     def width(self, value):
@@ -26,11 +26,11 @@ class Rectangle:
         elif (value < 0):
             raise ValueError("width must be >= 0")
         else:
-            self.__width__ = value
+            self.__width = value
 
     @property
     def height(self):
-        return (self.__height__)
+        return (self.__height)
 
     @height.setter
     def height(self, value):
@@ -39,7 +39,7 @@ class Rectangle:
         elif (value < 0):
             raise ValueError("height must be >= 0")
         else:
-            self.__height__ = value
+            self.__height = value
 
     def area(self):
         return (self.width * self.height)
@@ -62,13 +62,8 @@ class Rectangle:
         if (self.width == 0) or (self.height == 0):
             return("")
         else:
-            for i in range(self.height):
-                for j in range(self.width):
-                    print("#", end="")
-                print()
-            return ("")
+            symbols = '#' * self.__width
+            return '\n'.join(symbols for height in range(self.__height))
 
     def __repr__(self):
-        return ("Rectangle(" + 
-            str(self.width) + ", " + 
-            str(self.height) + ")")
+        return ("Rectangle(" + str(self.width) + ", " + str(self.height) + ")")
