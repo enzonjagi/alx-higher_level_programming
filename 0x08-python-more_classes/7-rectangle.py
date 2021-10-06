@@ -56,7 +56,7 @@ class Rectangle:
         if (self.width == 0) or (self.height == 0):
             return("")
         else:
-            symbols = "{}".format(Rectangle.print_symbol) * self.__width
+            symbols = "{}".format(self.print_symbol) * self.__width
             return '\n'.join(symbols for height in range(self.__height))
 
     def __repr__(self):
