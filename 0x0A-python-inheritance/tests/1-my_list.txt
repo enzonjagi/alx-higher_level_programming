@@ -1,0 +1,52 @@
+Test cases for the 1-my_list module
+
+Edge cases
+1. Check output if list is empty
+2. Check output of what is printed versus what the list contains
+3. Check if the output is actually sorted
+4. 
+Implementation
+###################################
+###################################
+Edge Case 1
+    >>> my_list = MyList()
+    >>> print(my_list)
+    []
+    >>> my_list.print_sorted()
+    []
+
+###################################
+Edge case 2
+
+    >>> my_list = MyList()
+    >>> my_list.append(1)
+    >>> my_list.append(4)
+    >>> my_list.append(2)
+    >>> my_list.append(3)
+    >>> my_list.append(5)
+    >>> print(my_list)
+    [1, 4, 2, 3, 5]
+    >>> my_list.print_sorted()
+    [1, 2, 3, 4, 5]
+    >>> print(my_list)
+    [1, 4, 2, 3, 5]
+
+###################################
+Edge Case 3
+
+    >>> my_list = MyList()
+    >>> my_list.append(1)
+    >>> my_list.append(4)
+    >>> my_list.append(2)
+    >>> my_list.append(3)
+    >>> my_list.append(5)
+    >>> empty_list = my_list[:]
+    >>> empty_list.sort()
+    >>> print(my_list)
+    [1, 4, 2, 3, 5]
+    >>> my_list.print_sorted()
+    [1, 2, 3, 4, 5]
+    >>> print(empty_list)
+    [1, 2, 3, 4, 5]
+
+###################################
