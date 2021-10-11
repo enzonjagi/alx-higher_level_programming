@@ -6,7 +6,7 @@ This module series contains a class and some inheritance
 
 class BaseGeometry:
     """
-    An Empty module
+    An Empty class
     """
 
     pass
