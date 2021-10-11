@@ -1,4 +1,4 @@
-#/usr/bin/python3
+#!/usr/bin/python3
 """
 module to check if object is an instance of a class
 or its subclass
