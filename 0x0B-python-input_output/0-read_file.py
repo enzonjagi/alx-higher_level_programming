@@ -12,8 +12,10 @@ def read_file(filename=""):
     Executing the purpose of this module
     """
 
-    with open(filename, mode='r', encoding='utf-8') as f:
-        read_data = f.read()
+    with open(filename, mode='r', encoding='UTF8') as f:
         for line in f:
             print(line)
-    return read_data
+
+
+if __name__ == '__main__':
+    read_file("file_2")
