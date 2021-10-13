@@ -12,5 +12,6 @@ def write_file(filename="", text=""):
     Write to a text file(overwrite)
     """
 
-    with open(filename, mode="w", encoding="utf-8") as f:
-        f.write(text)
+    with open(filename, mode='w', encoding='utf-8') as f:
+        write_data = f.write(text)
+    return write_data
