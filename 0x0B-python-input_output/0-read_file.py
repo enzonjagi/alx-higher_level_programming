@@ -8,6 +8,10 @@ Prints it out to stdout
 
 
 def read_file(filename=""):
+    """
+    Executing the purpose of this module
+    """
+
     with open(filename, mode='r', encoding='utf-8') as f:
         for line in f:
             print(line)
