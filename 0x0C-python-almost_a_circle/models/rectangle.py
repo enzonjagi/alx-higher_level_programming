@@ -22,11 +22,11 @@ class Rectangle(Base):
         Instantiate class attributes and call super() class,
         with id
         '''
-        super().__init__(id=id)
         self.width = width
         self.height = height
         self.x = x
         self.y = y
+        super().__init__(id)
 
     @property
     def width(self):
