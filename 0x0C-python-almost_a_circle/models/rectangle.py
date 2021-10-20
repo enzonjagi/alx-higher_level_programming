@@ -1,15 +1,14 @@
 #!/usr/bin/python3
-'''
-this module contains a rectangle class,
-that inherits from Base.
+'''this module contains a rectangle class,
+the class inherits from the Base class.
 '''
 
 from base import Base
 
 
 class Rectangle(Base):
-    '''
-    A rectangle class that has the following private instance attributes:
+    '''A rectangle class
+    The class has the following private instance attributes:
     width, height, x, and y:
     each with its own setter and getter
     A constructor class calling the supper class with id,
@@ -17,7 +16,7 @@ class Rectangle(Base):
     '''
 
     def __init__(self, width, height, x, y, id=None):
-        '''
+        '''Instantiation
         Instantiate class attributes and call super() class,
         with id
         '''
@@ -44,15 +43,14 @@ class Rectangle(Base):
 
     @property
     def width(self):
-        '''
-        Width getter
-        gets the private instance attribute
+        '''Width Getter
+        Width getter that gets the private instance attribute
         '''
         return self.__width
 
     @width.setter
     def width(self, value):
-        '''
+        '''Width setter
         Width setter
         sets the private instance attribute
         '''
@@ -63,16 +61,14 @@ class Rectangle(Base):
 
     @property
     def height(self):
-        '''
-        Height getter
+        '''Height getter
         gets the private instance attribute
         '''
         return self.__height
 
     @height.setter
     def height(self, value):
-        '''
-        Height setter
+        '''Height setter
         sets the private instance attribute
         '''
         if (type(value) is not int):
@@ -82,16 +78,14 @@ class Rectangle(Base):
 
     @property
     def x(self):
-        '''
-        x getter
+        '''x getter
         gets the private instance attribute
         '''
         return self.__x
 
     @x.setter
     def x(self, value):
-        '''
-        x setter
+        '''x setter
         sets the private instance attribute
         '''
         if (type(value) is not int):
@@ -101,19 +95,23 @@ class Rectangle(Base):
 
     @property
     def y(self):
-        '''
-        y getter
+        '''y getter
         gets the private instance attribute
         '''
         return self.__y
 
     @y.setter
     def y(self, value):
-        '''
-        y setter
+        '''y setter
         sets the private instance attribute
         '''
         if (type(value) is not int):
             raise TypeError("y must be an integer")
         else:
             self.__y = value
+
+    def area(self):
+        '''area method for a rectangle instance
+        returns the area of a Rectangle Instance
+        '''
+        return (self.__width * self.__height)
