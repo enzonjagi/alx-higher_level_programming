@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 '''
 this module contains a rectangle class,
-that inherits from Base
+that inherits from Base.
 '''
 
 from base import Base
@@ -12,7 +12,6 @@ class Rectangle(Base):
     A rectangle class that has the following private instance attributes:
     width, height, x, and y:
     each with its own setter and getter
-
     A constructor class calling the supper class with id,
     and assigns the private attirbutes respectively
     '''
