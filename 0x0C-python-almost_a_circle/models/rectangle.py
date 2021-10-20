@@ -114,4 +114,4 @@ class Rectangle(Base):
         '''area method for a rectangle instance
         returns the area of a Rectangle Instance
         '''
-        return (self.__width * self.__height)
+        return (self.__width * self.__height) # gets area
