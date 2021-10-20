@@ -32,6 +32,7 @@ class Rectangle(Base):
     def width(self):
         '''
         Width getter
+        gets the private instance attribute
         '''
         return self.__width
 
@@ -39,6 +40,7 @@ class Rectangle(Base):
     def width(self, value):
         '''
         Width setter
+        sets the private instance attribute
         '''
         self.__width = value
 
@@ -46,6 +48,7 @@ class Rectangle(Base):
     def height(self):
         '''
         Height getter
+        gets the private instance attribute
         '''
         return self.__height
 
@@ -53,6 +56,7 @@ class Rectangle(Base):
     def height(self, value):
         '''
         Height setter
+        sets the private instance attribute
         '''
         self.__height = value
 
@@ -60,6 +64,7 @@ class Rectangle(Base):
     def x(self):
         '''
         x getter
+        gets the private instance attribute
         '''
         return self.__x
 
@@ -67,6 +72,7 @@ class Rectangle(Base):
     def x(self, value):
         '''
         x setter
+        sets the private instance attribute
         '''
         self.__x = value
 
@@ -74,6 +80,7 @@ class Rectangle(Base):
     def y(self):
         '''
         y getter
+        gets the private instance attribute
         '''
         return self.__y
 
@@ -81,5 +88,6 @@ class Rectangle(Base):
     def y(self, value):
         '''
         y setter
+        sets the private instance attribute
         '''
         self.__y = value
