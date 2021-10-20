@@ -22,10 +22,25 @@ class Rectangle(Base):
         Instantiate class attributes and call super() class,
         with id
         '''
-        self.width = width
-        self.height = height
-        self.x = x
-        self.y = y
+        if width <= 0:
+            raise ValueError("width must be > 0")
+        else:
+            self.width = width
+
+        if height <= 0:
+            raise ValueError("height must be > 0")
+        else:
+            self.height = height
+
+        if x < 0:
+            raise ValueError("x must be >= 0")
+        else:
+            self.x = x
+
+        if y < 0:
+            raise ValueError("y must be >= 0")
+        else:
+            self.y = y
         super().__init__(id)
 
     @property
@@ -42,7 +57,10 @@ class Rectangle(Base):
         Width setter
         sets the private instance attribute
         '''
-        self.__width = value
+        if (type(value) is not int):
+            raise TypeError("width must be an integer")
+        else:
+            self.__width = value
 
     @property
     def height(self):
@@ -58,7 +76,10 @@ class Rectangle(Base):
         Height setter
         sets the private instance attribute
         '''
-        self.__height = value
+        if (type(value) is not int):
+            raise TypeError("height must be an integer")
+        else:
+            self.__height = value
 
     @property
     def x(self):
@@ -74,7 +95,10 @@ class Rectangle(Base):
         x setter
         sets the private instance attribute
         '''
-        self.__x = value
+        if (type(value) is not int):
+            raise TypeError("x must be an integer")
+        else:
+            self.__x = value
 
     @property
     def y(self):
@@ -90,4 +114,7 @@ class Rectangle(Base):
         y setter
         sets the private instance attribute
         '''
-        self.__y = value
+        if (type(value) is not int):
+            raise TypeError("y must be an integer")
+        else:
+            self.__y = value
