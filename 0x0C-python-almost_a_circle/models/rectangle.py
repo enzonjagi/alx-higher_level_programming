@@ -125,27 +125,45 @@ class Rectangle(Base):
                 str(self.__width) + "/" +
                 str(self.__height))
 
+    def update(self, *args):
+        '''Assigns arguments to attributes
+        1st argument should be the id attribute
+        2nd argument should be the width attribute
+        3rd argument should be the height attribute
+        4th argument should be the x attribute
+        5th argument should be the y attribute
+        '''
+        for i, a in enumerate(args):
+            if i == 0:
+                self.id = a
+            elif i == 1:
+                self.__width = a
+            elif i == 2:
+                self.__height = a
+            elif i == 2:
+                self.__x = a
+            elif i == 3:
+                self.__y = a
+
 
 if __name__ == "__main__":
 
-    r1 = Rectangle(3, 2)
-    print(r1.area())
+    r1 = Rectangle(10, 10, 10, 10)
+    print(r1)
 
-    r2 = Rectangle(2, 10)
-    print(r2.area())
+    r1.update(89)
+    print(r1)
 
-    r3 = Rectangle(8, 7, 0, 0, 12)
-    print(r3.area())
+    r1.update(89, 2)
+    print(r1)
 
-    r1 = Rectangle(4, 6)
-    r1.display()
+    r1.update(89, 2, 3)
+    print(r1)
 
-    print("---")
+    r1.update(89, 2, 3, 4)
+    print(r1)
 
-    r1 = Rectangle(2, 2)
-    r1.display()
-
-    r1 = Rectangle(4, 6, 2, 1, 12)
+    r1.update(89, 2, 3, 4, 5)
     print(r1)
 
     r2 = Rectangle(5, 5, 1)
