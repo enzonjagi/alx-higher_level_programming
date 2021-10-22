@@ -163,7 +163,7 @@ class Rectangle(Base):
     def to_dictionary(self):
         """dictionary representation
         this function makes a dictionary representation of
-        a Rectangle instance 
+        a Rectangle instance
         """
         dic = {}
         dic["id"] = self.id
