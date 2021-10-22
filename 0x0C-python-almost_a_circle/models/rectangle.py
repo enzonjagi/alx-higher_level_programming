@@ -1,25 +1,25 @@
 #!/usr/bin/python3
-'''this module contains a rectangle class,
+"""this module contains a rectangle class,
 the class inherits from the Base class.
-'''
+"""
 
 from base import Base
 
 
 class Rectangle(Base):
-    '''A rectangle class
+    """A rectangle class
     The class has the following private instance attributes:
     width, height, x, and y:
     each with its own setter and getter
     A constructor class calling the supper class with id,
     and assigns the private attirbutes respectively
-    '''
+    """
 
     def __init__(self, width, height, x=0, y=0, id=None):
-        '''Instantiation
+        """Instantiation
         Instantiate class attributes and call super() class,
         with id
-        '''
+        """
         self.width = width
         self.height = height
         self.x = x
@@ -28,17 +28,17 @@ class Rectangle(Base):
 
     @property
     def width(self):
-        '''Width Getter
+        """Width Getter
         Width getter that gets the private instance attribute
-        '''
+        """
         return self.__width
 
     @width.setter
     def width(self, value):
-        '''Width setter
+        """Width setter
         Width setter
         sets the private instance attribute
-        '''
+        """
         if (type(value) is not int):
             raise TypeError("width must be an integer")
         elif (value <= 0):
@@ -48,16 +48,16 @@ class Rectangle(Base):
 
     @property
     def height(self):
-        '''Height getter
+        """Height getter
         gets the private instance attribute
-        '''
+        """
         return self.__height
 
     @height.setter
     def height(self, value):
-        '''Height setter
+        """Height setter
         sets the private instance attribute
-        '''
+        """
         if (type(value) is not int):
             raise TypeError("height must be an integer")
         elif (value <= 0):
@@ -67,16 +67,16 @@ class Rectangle(Base):
 
     @property
     def x(self):
-        '''x getter
+        """x getter
         gets the private instance attribute
-        '''
+        """
         return self.__x
 
     @x.setter
     def x(self, value):
-        '''x setter
+        """x setter
         sets the private instance attribute
-        '''
+        """
         if (type(value) is not int):
             raise TypeError("x must be an integer")
         elif value < 0:
@@ -86,16 +86,16 @@ class Rectangle(Base):
 
     @property
     def y(self):
-        '''y getter
+        """y getter
         gets the private instance attribute
-        '''
+        """
         return self.__y
 
     @y.setter
     def y(self, value):
-        '''y setter
+        """y setter
         sets the private instance attribute
-        '''
+        """
         if (type(value) is not int):
             raise TypeError("y must be an integer")
         elif value < 0:
@@ -104,20 +104,23 @@ class Rectangle(Base):
             self.__y = value
 
     def area(self):
-        '''area method for a rectangle instance
+        """area method for a rectangle instance
         returns the area of a Rectangle Instance
-        '''
+        """
         return (self.__width * self.__height)
 
     def display(self):
-        '''prints the # character
+        """prints the # character
         prints in stdout the Rectangle instance with the character #
-        '''
+        """
         print(("\n" * self.__y) +
               "\n".join(((" " * self.__x) + ("#" * self.__width))
                         for i in range(self.__height)))
 
     def __str__(self):
+        """string method
+        This overrrides the default string method
+        """
         return ("[Rectangle] (" +
                 str(self.id) + ") " +
                 str(self.__x) + "/" +
@@ -125,25 +128,49 @@ class Rectangle(Base):
                 str(self.__width) + "/" +
                 str(self.__height))
 
-    def update(self, *args):
-        '''Assigns arguments to attributes
+    def update(self, *args, **kwargs):
+        """Assigns arguments to attributes
         1st argument should be the id attribute
         2nd argument should be the width attribute
         3rd argument should be the height attribute
         4th argument should be the x attribute
         5th argument should be the y attribute
-        '''
-        for i, a in enumerate(args):
-            if i == 0:
-                self.id = a
-            elif i == 1:
-                self.__width = a
-            elif i == 2:
-                self.__height = a
-            elif i == 2:
-                self.__x = a
-            elif i == 3:
-                self.__y = a
+        """
+        if len(args):
+            for i, a in enumerate(args):
+                if i == 0:
+                    self.id = a
+                elif i == 1:
+                    self.width = a
+                elif i == 2:
+                    self.height = a
+                elif i == 3:
+                    self.x = a
+                elif i == 4:
+                    self.y = a
+        else:
+            if "id" in kwargs:
+                self.id = kwargs["id"]
+            elif "width" in kwargs:
+                self.width = kwargs["width"]
+            elif "height" in kwargs:
+                self.height = kwargs["height"]
+            elif "x" in kwargs:
+                self.x = kwargs["x"]
+            elif "y" in kwargs:
+                self.width = kwargs["y"]
+
+    def to_dictionary(self):
+        """dictionary representation
+        this function makes a dictionary representation of
+        a Rectangle instance 
+        """
+        dic = {}
+        dic["id"] = self.id
+        dic["width"] = self.width
+        dic["height"] = self.height
+        dic["x"] = self.x
+        dic["y"] = self.y
 
 
 if __name__ == "__main__":
