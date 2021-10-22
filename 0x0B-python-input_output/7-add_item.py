@@ -18,7 +18,8 @@ for i in range(1, len(sys.argv)):
     empty_list.append(sys.argv[i])
 # checking if the list is populated
 # print(empty_list)
-
+# TODO Work on case where items are added one at a time
+# TIP: Save the current list somewhere and display that
 # Saving to JSON File
 my_file = "add_item.json"
 save_to_json_file(empty_list, my_file)
