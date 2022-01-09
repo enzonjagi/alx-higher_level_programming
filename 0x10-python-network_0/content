@@ -1,0 +1,18 @@
+HTTP/1.1 301 Moved Permanently
+Date: Sun, 09 Jan 2022 21:05:41 GMT
+Connection: keep-alive
+Location: https://theroom.com/
+CF-Cache-Status: DYNAMIC
+Server: cloudflare
+CF-RAY: 6cb0a00928944fcb-JNB
+alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400, h3-28=":443"; ma=86400, h3-27=":443"; ma=86400
+Content-Type: text/html
+Transfer-Encoding: chunked
+
+<html>
+<head><title>301 Moved Permanently</title></head>
+<body>
+<center><h1>301 Moved Permanently</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
