@@ -1,4 +1,3 @@
 #!/usr/bin/env bash
 # accepts a URL, sends a request to the URL and returns size of response body
-curl "$1" -I -o headers -s
-tail -n2 headers | head -n1 |cut '-d ' '-f2'
+curl "$1" -o /dev/null '%{size_download}\n' -s
