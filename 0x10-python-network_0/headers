@@ -1,0 +1,11 @@
+HTTP/1.1 301 Moved Permanently
+Location: http://www.google.com/
+Date: Sun, 09 Jan 2022 20:35:59 GMT
+Expires: Tue, 08 Feb 2022 20:35:59 GMT
+Cache-Control: public, max-age=2592000
+Server: gws
+X-XSS-Protection: 0
+X-Frame-Options: SAMEORIGIN
+Content-Type: text/html;charset=UTF-8
+Content-Length: 219
+
