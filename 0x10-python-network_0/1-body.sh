@@ -1,3 +1,3 @@
-#!/usr/bin/env bash
+#!/bin/bash
 # accepts a URL, sends a GET request to the URL and returns the response body
 curl -sL "$1"
