@@ -9,6 +9,7 @@ import sys
 
 
 with urllib.request.urlopen(sys.argv[1]) as resp:
+    '''store response in a variable'''
     r = resp.info()
 
 if __name__ == '__main__':
