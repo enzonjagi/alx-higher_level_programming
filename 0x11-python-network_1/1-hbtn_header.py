@@ -1,12 +1,15 @@
 #!/usr/bin/python3
-"""Python script that sends a request
- and displays value of the X-Request-Id header variable
 """
-import urllib.request
+Python script that sends a request
+and displays value of the X-Request-Id header variable
+"""
+
+import urllib
 import sys
 
 
 with urllib.request.urlopen(sys.argv[1]) as resp:
     r = resp.info()
 
-print(r.get('X-Request-Id'))
+if __name__ == '__main__':
+    print(r.get('X-Request-Id'))
