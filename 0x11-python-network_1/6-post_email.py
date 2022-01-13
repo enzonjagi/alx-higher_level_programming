@@ -7,5 +7,5 @@ if __name__ == '__main__':
 
     data = {'email': sys.argv[2]}
 
-    r = requests.post(sys.argv[1], data)
+    r = requests.post(sys.argv[1], sys.argv[2])
     print(r.text())
