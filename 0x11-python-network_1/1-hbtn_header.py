@@ -1,8 +1,7 @@
 #!/usr/bin/python3
-'''
-Pythos script that sends a request
+"""Python script that sends a request
  and displays value of the X-Request-Id header variable
-'''
+"""
 import urllib.request
 import sys
 
