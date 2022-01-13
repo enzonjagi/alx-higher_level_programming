@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Python script that sends a request and displays value of the X-Request-Id header variable"""
+"""Python script that displays value of X-Request-Id header variable"""
 
 import urllib.request
 import sys
