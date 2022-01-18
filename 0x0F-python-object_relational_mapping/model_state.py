@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-'''contains the class definition of a State'''
-
+'''contains the state class definition'''
 
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.ext.declarative import decalarative_base
