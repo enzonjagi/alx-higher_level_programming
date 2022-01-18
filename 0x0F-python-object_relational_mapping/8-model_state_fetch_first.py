@@ -27,8 +27,18 @@ if __name__ == '__main__':
         session = Session()
 
         # Query db.table to get the states details
+        first = session.query(State).order_by(State.id).first()
+        session.close()
+
+        if first:
+            print('{}: {}'.format(first.id, first.name))
+        else:
+            print("Nothing")
+        # initial working code but checker disagrees
+        """
         for instance in session.query(State).order_by(State.id)[0:1]:
             if instance is not None:
                 print('{}: {}'.format(instance.id, instance.name))
             else:
                 print("Nothing")
+        """
