@@ -13,6 +13,10 @@ if __name__ == '__main__':
     Base = declarative_base()
 
     class State(Base):
+        '''State model
+        Contains the definition of the State Table
+        as seen below
+        '''
         __tablename__ = 'states'
 
         id = Column(
