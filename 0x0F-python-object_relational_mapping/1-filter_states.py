@@ -21,5 +21,8 @@ if __name__ == '__main__':
         'SELECT * FROM states WHERE name regexp "^N.*" ORDER BY id')
     result = cur.fetchall()
 
+    cur.close()
+    db.close()
     for x in result:
-        print(x)
+        if x[1][0] == "N":
+            print(x)
