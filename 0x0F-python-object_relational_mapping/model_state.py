@@ -11,6 +11,7 @@ from sqlalchemy.ext.declarative import decalarative_base
 
 Base = declarative_base()
 
+
 class State(Base):
     '''State model
     Contains the definition of the State Table
