@@ -27,7 +27,7 @@ if __name__ == '__main__':
         session = Session()
 
         # Query db.table to get the states details
-        for instance in session.query(states).order_by(states.id):
+        for instance in session.query(State).order_by(State.id):
             print(
-                '{}: {}'.format(states.id, states.name)
+                '{}: {}'.format(instance.id, instance.name)
             )
