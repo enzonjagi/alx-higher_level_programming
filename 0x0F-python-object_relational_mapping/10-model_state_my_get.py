@@ -34,5 +34,8 @@ if __name__ == '__main__':
         session = Session()
 
         # Query db.table to get the states details
-        for se in session.query(State).filter(State.name == str(clean)):
+        se = session.query(State).filter(State.name.like(clean)).first()
+        if se:
             print('{}'.format(se.id))
+        else:
+            print('Not found')
