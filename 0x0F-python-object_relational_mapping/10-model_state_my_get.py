@@ -18,7 +18,7 @@ if __name__ == '__main__':
         # get rid of SQL injection
         clean = ""
         for char in search:
-            if char == '\s':
+            if char == ' ':
                 clean = clean[0:-1]
             clean += char
         # create the connection to the database
@@ -34,8 +34,5 @@ if __name__ == '__main__':
         session = Session()
 
         # Query db.table to get the states details
-        for instance in session.query(State).filter(State.name == str(clean)):
-            if instance is not None:
-                print('{}'.format(instance.id))
-            else:
-                print("Not found")
+        for se in session.query(State).filter(State.name == str(clean)):
+            print('{}'.format(se.id))
