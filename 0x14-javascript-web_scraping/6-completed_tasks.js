@@ -1,31 +1,20 @@
 #!/usr/bin/node
-/* Get the request module */
+// Get the number of tasks completed by user id
 const request = require('request');
-const fs = require('fs');
-
-/* Load the command line arguments (from the 2nd one) into an array */
-const myargs = process.argv.slice(2);
-const count = 0;
-/* Write the string into the file or log error to console */
-request(myargs[0], (err, response, body) => {
-  /* If there's an error log it onto the console */
+request(process.argv[2], { json: true }, (err, resp, body) => {
   if (err) {
-    return console.log(err);
-  }
-  const obj = JSON.parse(body);
-
-  const dict = {};
-  let count;
-  for (let x = 1; x <= 10; x++) {
-    dict.key = x;
-    count = 0;
-    for (let i = 0; i < obj.length; i++) {
-      if (obj[i].userId === x && obj[i].completed === true) {
-        count += 1;
+    console.log(err);
+  } else if (body) {
+    const tasksByUser = {};
+    for (const i in body) {
+      if (body[i].completed === true) {
+        if (tasksByUser[body[i].userId] === undefined) {
+          tasksByUser[body[i].userId] = 1;
+        } else {
+          tasksByUser[body[i].userId]++;
+        }
       }
     }
-    dict[x] = count;
+    console.log(tasksByUser);
   }
-  delete dict.key;
-  console.log(dict);
 });
